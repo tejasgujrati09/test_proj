@@ -26,11 +26,4 @@ def home(request):
 	    return HttpResponse("data saved sucessfully")
 
 
-@csrf_exempt
-def save_data(request):
-	if request.method == 'GET':	    
-	    return HttpResponse("sensor data saved sucessfully")
 
-@csrf_exempt
-def about(request):
-	return HttpResponse("about")
