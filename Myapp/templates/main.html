@@ -15,9 +15,19 @@
               <th>Value3</th>
               <th>Time</th>
             </tr>
-        {% block content %}
-
-        {% endblock content %}
+            {% block content %}
+            {% for data in sensor_data %}
+            <tr>
+                <th> {{data.sensor}}</th>
+                <th>{{data.location}}</th> 
+                <th>{{data.value1}}</th>
+                <th>{{data.value2}}</th>
+                <th>{{data.value3}}</th>
+                <th>{{data.reading_time}}</th>
+            </tr>
+            {% endfor %}
+            {% endblock content %}
+        </table>
     </div>
 </body>
 </html>

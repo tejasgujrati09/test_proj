@@ -13,7 +13,7 @@ def home(request):
 		sensor_data = Sensor_data.objects.all()[:10]
 		context = {'sensor_data': sensor_data}
 		#context = {"data" : [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]}
-		return render(request, 'index.html', context)
+		return render(request, 'main.html', context)
 
 	if request.method == 'POST':
 	    sensor = request.POST.get("sensor")
