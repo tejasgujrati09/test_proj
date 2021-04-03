@@ -12,6 +12,6 @@ class Sensor_data(models.Model):
     value1 = models.CharField(max_length = 15 , blank = True)
     value2 = models.CharField(max_length = 15 , blank = True)
     value3 = models.CharField(max_length = 15 , blank = True)
-    reading_time = models.DateTimeField(default=timezone.now())
+    reading_time = models.DateTimeField(default=timezone.now)
 
 
